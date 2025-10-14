@@ -31,7 +31,7 @@
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   display: flex;
-  justify-content: flex-start; /* Cambiado de space-between a flex-start para alinear a la izquierda */
+  justify-content: space-between; /* Restaurado space-between para separar logo y menú hamburguesa */
   align-items: center;
 }
 
@@ -132,6 +132,7 @@
   cursor: pointer;
   padding: var(--spacing-sm);
   z-index: 1001;
+  margin-left: auto; /* Empuja el botón hacia la derecha */
 }
 
 .nav-toggle .bar {
