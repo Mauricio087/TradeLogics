@@ -180,6 +180,36 @@
   text-align: left;
 }
 
+/* Estilos para la imagen visual */
+.about-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-2xl);
+  position: relative;
+  z-index: 2;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-placeholder svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
   .about-stats {

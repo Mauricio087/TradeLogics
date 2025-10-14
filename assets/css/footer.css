@@ -39,6 +39,10 @@
 /* Columna de marca */
 .footer-brand {
     padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-logo {
@@ -47,12 +51,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .footer-logo .logo {
-    height: 50px;
+    height: 80px;
     width: auto;
     filter: brightness(1.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .footer-description {
