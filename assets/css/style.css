@@ -304,9 +304,7 @@ section:not(.hero) {
 }
 
 /* ===== SECCIÓN SERVICIOS ===== */
-.services {
-  background: var(--color-white);
-}
+/* Estilos básicos movidos a services.css para evitar conflictos */
 
 .services-grid {
   display: grid;
@@ -375,7 +373,32 @@ section:not(.hero) {
 
 /* ===== SECCIÓN POR QUÉ ELEGIRNOS ===== */
 .why-choose {
-  background: var(--color-white);
+  background: url('../img/fondo_mas_logistica.jpeg') center center/cover no-repeat fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Overlay sutil para mejorar legibilidad sin ocultar la imagen */
+.why-choose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Contenido de la sección */
+.why-choose .container {
+  position: relative;
+  z-index: 2;
 }
 
 .features-grid {
@@ -387,6 +410,16 @@ section:not(.hero) {
 .feature-item {
   text-align: center;
   padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-5px);
 }
 
 .feature-icon {
