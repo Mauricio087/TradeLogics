@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (service) {
                     // Crear mensaje personalizado para WhatsApp
                     const message = `Hola, me interesa conocer más sobre el servicio de ${service.title}. ¿Podrían brindarme más información?`;
-                    const whatsappUrl = `https://api.whatsapp.com/send?phone=TUNUMERO&text=${encodeURIComponent(message)}`;
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=56992614369&text=${encodeURIComponent(message)}`;
                     
                     // Abrir WhatsApp
                     window.open(whatsappUrl, '_blank');
