@@ -418,8 +418,10 @@ section:not(.hero) {
 }
 
 .feature-item:hover {
-  background: rgba(255, 255, 255, 0.9);
   transform: translateY(-5px);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-300);
 }
 
 .feature-icon {
@@ -439,6 +441,36 @@ section:not(.hero) {
 .feature-item p {
   color: var(--color-gray);
   line-height: 1.6;
+}
+
+/* Hover azul corporativo: asegurar contraste interno */
+.feature-item:hover h3,
+.feature-item:hover p {
+  color: var(--color-white);
+}
+
+.feature-item:hover .feature-icon {
+  color: var(--color-white);
+}
+
+/* Accesible y consistente en todas las vistas */
+.feature-item:focus-within,
+.feature-item:active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-300);
+}
+
+.feature-item:focus-within h3,
+.feature-item:focus-within p,
+.feature-item:active h3,
+.feature-item:active p {
+  color: var(--color-white);
+}
+
+.feature-item:focus-within .feature-icon,
+.feature-item:active .feature-icon {
+  color: var(--color-white);
 }
 
 /* ===== SECCIÓN TESTIMONIOS ===== */

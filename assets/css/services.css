@@ -69,11 +69,62 @@
 .service-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary-300);
 }
 
 .service-item:hover::before {
     transform: scaleX(1);
+}
+
+/* Hover azul corporativo: asegurar contraste interno */
+.service-item:hover .service-title,
+.service-item:hover .service-subtitle,
+.service-item:hover .service-description,
+.service-item:hover .service-feature {
+    color: var(--color-white);
+}
+
+.service-item:hover .feature-check {
+    color: var(--color-white);
+}
+
+.service-item:hover .service-icon {
+    background: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Accesible y consistente en todas las vistas */
+.service-item:focus-within,
+.service-item:active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary-300);
+}
+
+.service-item:focus-within .service-title,
+.service-item:focus-within .service-subtitle,
+.service-item:focus-within .service-description,
+.service-item:focus-within .service-feature,
+.service-item:active .service-title,
+.service-item:active .service-subtitle,
+.service-item:active .service-description,
+.service-item:active .service-feature {
+    color: var(--color-white);
+}
+
+.service-item:focus-within .feature-check,
+.service-item:active .feature-check {
+    color: var(--color-white);
+}
+
+.service-item:focus-within .service-icon,
+.service-item:active .service-icon {
+    background: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-md);
 }
 
 .service-item.animate-in {

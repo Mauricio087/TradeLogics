@@ -143,7 +143,9 @@
 .feature-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 28px rgba(6, 182, 212, 0.18);
-  border-color: var(--color-primary-200);
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-300);
 }
 
 .feature-item h3 {
@@ -160,6 +162,36 @@
   color: var(--color-gray-600);
   margin: 0;
   text-align: center;
+}
+
+/* Hover azul corporativo: asegurar contraste interno */
+.feature-item:hover h3,
+.feature-item:hover p {
+  color: var(--color-white);
+}
+
+.feature-item:hover .feature-icon {
+  color: var(--color-white);
+}
+
+/* Accesible y consistente en todas las vistas */
+.feature-item:focus-within,
+.feature-item:active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary-300);
+}
+
+.feature-item:focus-within h3,
+.feature-item:focus-within p,
+.feature-item:active h3,
+.feature-item:active p {
+  color: var(--color-white);
+}
+
+.feature-item:focus-within .feature-icon,
+.feature-item:active .feature-icon {
+  color: var(--color-white);
 }
 
 /* Acento superior corporativo en cada card */
