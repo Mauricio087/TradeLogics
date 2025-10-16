@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function createTestimonialElement(testimonial, index) {
         const testimonialDiv = document.createElement('div');
         testimonialDiv.className = 'testimonial-item';
+        // Hacer la card enfocables para accesibilidad y :focus-visible
+        testimonialDiv.setAttribute('tabindex', '0');
         testimonialDiv.setAttribute('data-category', testimonial.category);
         testimonialDiv.style.animationDelay = `${index * 0.2}s`;
         
@@ -185,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
             
-            // Función para mostrar testimonio específico
+            // Función para mostrar testimonio específico (control por clase)
             function showTestimonial(index) {
                 if (index < 0) index = testimonialItems.length - 1;
                 if (index >= testimonialItems.length) index = 0;
@@ -193,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentIndex = index;
                 
                 testimonialItems.forEach((item, i) => {
-                    item.style.display = i === index ? 'block' : 'none';
+                    item.classList.toggle('active', i === index);
                 });
                 
                 dots.forEach((dot, i) => {
@@ -215,17 +217,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Renderizar testimonios al cargar la página
     renderTestimonials();
-    
-    // Inicializar carrusel en móvil
-    initTestimonialCarousel();
-    
-    // Manejar redimensionamiento de ventana
-    window.addEventListener('resize', () => {
-        // Re-inicializar si es necesario
-        if (window.innerWidth <= 768) {
-            initTestimonialCarousel();
-        }
-    });
     
     // Exponer funciones globalmente si es necesario
     window.filterTestimonials = filterTestimonials;

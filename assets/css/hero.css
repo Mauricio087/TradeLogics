@@ -304,7 +304,7 @@
 @media (max-width: 767px) {
   .hero {
     min-height: 500px;
-    padding-top: 80px; /* Compensar altura del header fijo */
+    padding-top: 120px; /* Compensar altura del header fijo ajustado */
   }
   
   .hero-container {
@@ -344,6 +344,7 @@
 @media (max-width: 479px) {
   .hero {
     min-height: 450px;
+    padding-top: 104px; /* Compensación adicional en móvil pequeño */
   }
   
   .hero-container {

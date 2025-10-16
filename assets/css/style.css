@@ -459,6 +459,91 @@ section:not(.hero) {
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-md);
   position: relative;
+  border: 1px solid var(--color-primary-100);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+  will-change: box-shadow, border-color;
+  animation: cardPulse 6s ease-in-out infinite;
+}
+
+/* Línea de acento superior corporativa */
+.testimonial-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+/* Hover/focus: elevación, acento y leve realce */
+.testimonial-item:hover,
+.testimonial-item:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-300);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.testimonial-item:hover::before,
+.testimonial-item:focus-within::before {
+  transform: scaleX(1);
+}
+
+.testimonial-item:active {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-item:hover .quote-icon,
+.testimonial-item:focus-within .quote-icon {
+  color: var(--color-white);
+}
+
+/* Texto en hover: asegurar contraste adecuado */
+.testimonial-item:hover .testimonial-quote,
+.testimonial-item:hover .testimonial-quote p,
+.testimonial-item:hover .testimonial-author,
+.testimonial-item:hover .author-info,
+.testimonial-item:hover .author-name,
+.testimonial-item:hover .author-position,
+.testimonial-item:hover .testimonial-company,
+.testimonial-item:focus-within .testimonial-quote,
+.testimonial-item:focus-within .testimonial-quote p,
+.testimonial-item:focus-within .testimonial-author,
+.testimonial-item:focus-within .author-info,
+.testimonial-item:focus-within .author-name,
+.testimonial-item:focus-within .author-position,
+.testimonial-item:focus-within .testimonial-company {
+  color: var(--color-white);
+}
+
+/* Accesibilidad: enfoque visible al navegar con teclado */
+.testimonial-item:focus-visible {
+  outline: 3px solid var(--color-secondary-400);
+  outline-offset: 4px;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.testimonial-item:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* Animación permanente profesional (pulso suave de elevación/borde) */
+@keyframes cardPulse {
+  0%, 100% {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-100);
+  }
+  50% {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary-200);
+  }
 }
 
 .testimonial-quote {
@@ -576,6 +661,96 @@ section:not(.hero) {
 }
 
 /* ===== MEDIA QUERIES - DISEÑO RESPONSIVO ===== */
+
+/* Móvil - menos de 768px */
+@media (max-width: 767px) {
+  /* Ajustes globales de espaciado */
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+  section {
+    padding: var(--spacing-2xl) 0;
+    scroll-margin-top: 104px; /* Alineado con header móvil */
+  }
+  section:not(.hero) {
+    padding-top: calc(var(--spacing-2xl) + 24px);
+  }
+
+  /* Botones y CTAs */
+  .cta-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Gaps y paddings de bloques */
+  .features-grid {
+    gap: var(--spacing-lg);
+  }
+  .feature-item {
+    padding: var(--spacing-lg);
+  }
+  .services-grid {
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  .service-item {
+    padding: var(--spacing-lg);
+  }
+
+  /* Sección Por qué elegirnos: desactivar fondo fijo */
+  .why-choose {
+    background-attachment: scroll;
+    min-height: auto;
+  }
+
+  /* Botones flotantes */
+  .floating-buttons {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    gap: var(--spacing-sm);
+  }
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Centrar sección Testimonios en móvil */
+  .testimonials-grid {
+    justify-items: center;
+  }
+  .testimonial-item {
+    text-align: center;
+  }
+  .testimonial-quote {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonial-quote p,
+  .testimonial-author,
+  .author-info,
+  .testimonial-company {
+    text-align: center;
+  }
+  .quote-icon {
+    display: block;
+    margin: 0 auto var(--spacing-sm);
+  }
+}
+
+/* Móvil pequeño - menos de 480px */
+@media (max-width: 479px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  section {
+    padding: var(--spacing-xl) 0;
+    scroll-margin-top: 92px; /* Alineado con header móvil pequeño */
+  }
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
 
 /* Tablet - 768px y superior */
 @media (min-width: 768px) {

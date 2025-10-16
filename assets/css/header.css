@@ -205,9 +205,16 @@
     transform: scale(1.05);
   }
   
+  .navbar {
+    padding: var(--spacing-sm) 0;
+  }
+  
   /* Ajustar el logo en móvil para que no sea tan grande */
+  .nav-logo {
+    height: 88px; /* Contenedor más compacto en móvil */
+  }
   .nav-logo .logo {
-    height: 120px; /* Reducido proporcionalmente para móvil */
+    height: 84px; /* Más compacto en móvil */
   }
   
   .nav-logo .brand-name {
@@ -222,11 +229,15 @@
   }
   
   .navbar {
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .nav-logo {
+    height: 76px; /* Contenedor más compacto en móvil pequeño */
   }
   
   .nav-logo .logo {
-    height: 100px; /* Reducido para móvil pequeño */
+    height: 72px; /* Más compacto para móvil pequeño */
   }
   
   .nav-logo .brand-name {
