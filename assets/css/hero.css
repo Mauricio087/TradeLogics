@@ -7,7 +7,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-gray-100) 0%, var(--color-primary-100) 30%, var(--color-secondary-100) 70%, var(--color-gray-200) 100%);
+  background: url('../img/hero.jpeg') center center/cover no-repeat;
   padding-top: 180px;
 }
 
@@ -20,6 +20,8 @@
   right: 0;
   bottom: 0;
   background: 
+    /* Superposición oscura para contraste */
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     /* Patrón de líneas corporativas */
     linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
     linear-gradient(0deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
@@ -38,6 +40,7 @@
     repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(37, 99, 235, 0.03) 20px, rgba(37, 99, 235, 0.03) 40px),
     repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(6, 182, 212, 0.03) 20px, rgba(6, 182, 212, 0.03) 40px);
   background-size: 
+    auto,
     60px 60px,
     60px 60px,
     120px 120px,
@@ -51,6 +54,7 @@
     80px 80px,
     80px 80px;
   background-position:
+    0 0,
     0 0,
     0 0,
     30px 30px,
@@ -89,24 +93,21 @@
 .hero h1 {
   font-size: var(--font-size-6xl);
   font-weight: var(--font-weight-extrabold);
-  color: var(--color-primary);
+  color: var(--color-white);
   margin-bottom: var(--spacing-lg);
   line-height: 1.1;
   letter-spacing: -0.02em;
   text-align: center;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
   font-size: var(--font-size-xl);
-  color: var(--color-gray-600);
+  color: var(--color-white);
   margin-bottom: var(--spacing-xl);
   line-height: 1.6;
   font-weight: var(--font-weight-normal);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero .btn {

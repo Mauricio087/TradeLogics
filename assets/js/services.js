@@ -1,7 +1,7 @@
 // ===== FUNCIONALIDAD DE SERVICIOS =====
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     // ===== DATOS DE SERVICIOS =====
     const services = [
         {
@@ -92,15 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== ICONOS SVG =====
     const serviceIcons = {
-        transport: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20,8h-3V4H3C1.89,4 1,4.89 1,6v12c0,1.11 0.89,2 2,2h1c0,1.66 1.34,3 3,3s3-1.34 3-3h6c0,1.66 1.34,3 3,3s3-1.34 3-3h1c1.11,0 2-0.89 2-2v-5L20,8zM7,19c-0.55,0 -1-0.45 -1-1s0.45-1 1-1s1,0.45 1,1S7.55,19 7,19zM19,19c-0.55,0 -1-0.45 -1-1s0.45-1 1-1s1,0.45 1,1S19.55,19 19,19zM17,12V9.5h2.5l1.96,2.5H17z"/>
-        </svg>`,
+        transport: `<img src="assets/img/transporte_internacional.jpeg" alt="Transporte Internacional" class="service-image">`,
+
         customs: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
             <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
         </svg>`,
-        consulting: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
-        </svg>`,
+        consulting: `<img src="assets/img/pre-importacion.jpeg" alt="Asesoría Pre-importación" class="service-image">`,
+
         finance: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
             <path d="M11.8,10.9C9.53,10.31 8.8,9.7 8.8,8.75C8.8,7.66 9.81,6.9 11.5,6.9C13.28,6.9 13.94,7.75 14,9H16.21C16.14,7.28 15.09,5.7 13,5.19V3H11V5.16C9.06,5.58 7.5,6.84 7.5,8.77C7.5,11.08 9.41,12.23 12.2,12.9C14.7,13.5 15.2,14.38 15.2,15.31C15.2,16 14.71,17.1 12.5,17.1C10.44,17.1 9.63,16.18 9.52,15H7.32C7.44,17.19 9.08,18.42 11,18.83V21H13V18.85C14.95,18.48 16.5,17.35 16.5,15.3C16.5,12.46 14.07,11.5 11.8,10.9Z"/>
         </svg>`,

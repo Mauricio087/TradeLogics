@@ -1,7 +1,24 @@
 /* Estilos para la sección Nuestra Empresa */
 .about {
   padding: var(--spacing-6xl) 0;
-  background: linear-gradient(135deg, var(--color-secondary-50) 0%, var(--color-primary-50) 100%);
+  position: relative;
+  background-image: url('../img/seccion.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+  pointer-events: none;
+}
+  background: var(--color-primary);
   position: relative;
 }
 
@@ -42,7 +59,7 @@
 .section-header h2 {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: var(--color-white);
   margin-bottom: var(--spacing-md);
   letter-spacing: -0.025em;
   text-align: center;
@@ -50,7 +67,7 @@
 
 .section-header .section-subtitle {
   font-size: var(--font-size-xl);
-  color: var(--color-secondary-700);
+  color: var(--color-gray-200);
   font-weight: var(--font-weight-medium);
   margin-bottom: var(--spacing-lg);
   text-align: center;

@@ -1,29 +1,29 @@
 /* ===== VARIABLES CSS CORPORATIVAS ===== */
 :root {
   /* Paleta de colores azul, celeste y blanco */
-  --color-primary: #2563eb;        /* Azul principal */
-  --color-primary-50: #eff6ff;     /* Azul muy claro */
-  --color-primary-100: #dbeafe;    /* Azul claro */
-  --color-primary-200: #bfdbfe;    /* Azul suave */
-  --color-primary-300: #93c5fd;    /* Azul medio claro */
-  --color-primary-400: #60a5fa;    /* Azul medio */
-  --color-primary-500: #3b82f6;    /* Azul estándar */
-  --color-primary-600: #2563eb;    /* Azul principal */
-  --color-primary-700: #1d4ed8;    /* Azul oscuro */
-  --color-primary-800: #1e40af;    /* Azul muy oscuro */
-  --color-primary-900: #1e3a8a;    /* Azul profundo */
+  --color-primary: #0D6EFD;        /* Azul principal (Bootstrap) */
+  --color-primary-50: #F0F6FF;     /* Azul muy claro */
+  --color-primary-100: #D6E4FF;    /* Azul claro */
+  --color-primary-200: #ADC8FF;    /* Azul suave */
+  --color-primary-300: #85AFFF;    /* Azul medio claro */
+  --color-primary-400: #5C95FF;    /* Azul medio */
+  --color-primary-500: #337CFF;    /* Azul estándar */
+  --color-primary-600: #0D6EFD;    /* Azul principal */
+  --color-primary-700: #0A58CA;    /* Azul oscuro */
+  --color-primary-800: #084298;    /* Azul muy oscuro */
+  --color-primary-900: #052C65;    /* Azul profundo */
   
-  --color-secondary: #06b6d4;      /* Celeste principal */
-  --color-secondary-50: #ecfeff;   /* Celeste muy claro */
-  --color-secondary-100: #cffafe;  /* Celeste claro */
-  --color-secondary-200: #a5f3fc;  /* Celeste suave */
-  --color-secondary-300: #67e8f9;  /* Celeste medio claro */
-  --color-secondary-400: #22d3ee;  /* Celeste medio */
-  --color-secondary-500: #06b6d4;  /* Celeste estándar */
-  --color-secondary-600: #0891b2;  /* Celeste oscuro */
-  --color-secondary-700: #0e7490;  /* Celeste muy oscuro */
-  --color-secondary-800: #155e75;  /* Celeste profundo */
-  --color-secondary-900: #164e63;  /* Celeste más profundo */
+  --color-secondary: #0DCAF0;      /* Celeste principal (Bootstrap Info) */
+  --color-secondary-50: #E7FAFE;   /* Celeste muy claro */
+  --color-secondary-100: #C4F2FD;  /* Celeste claro */
+  --color-secondary-200: #A1E9FC;  /* Celeste suave */
+  --color-secondary-300: #7EE1FB;  /* Celeste medio claro */
+  --color-secondary-400: #5BD8FA;  /* Celeste medio */
+  --color-secondary-500: #38D0F9;  /* Celeste estándar */
+  --color-secondary-600: #0DCAF0;  /* Celeste principal */
+  --color-secondary-700: #0AB2D1;  /* Celeste oscuro */
+  --color-secondary-800: #0789A8;  /* Celeste muy oscuro */
+  --color-secondary-900: #05607F;  /* Celeste más profundo */
   
   --color-white: #ffffff;          /* Blanco puro */
   --color-gray-50: #f8fafc;        /* Gris muy claro */
@@ -41,10 +41,10 @@
   --color-light: var(--color-gray-50);
   
   /* Gradientes con azul, celeste y blanco */
-  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
-  --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%);
-  --gradient-light: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #eff6ff 100%);
-  --gradient-accent: linear-gradient(135deg, #1e40af 0%, #0891b2 100%);
+  --gradient-primary: linear-gradient(135deg, #0D6EFD 0%, #0DCAF0 100%);
+  --gradient-secondary: linear-gradient(135deg, #0DCAF0 0%, #38D0F9 100%);
+  --gradient-light: linear-gradient(135deg, #ffffff 0%, #F0F6FF 50%, #E7FAFE 100%);
+  --gradient-accent: linear-gradient(135deg, #0A58CA 0%, #0AB2D1 100%);
   
   /* Tipografía corporativa */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
