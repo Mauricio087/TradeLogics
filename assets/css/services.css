@@ -1,8 +1,8 @@
 /* ===== ESTILOS DE SERVICIOS ===== */
 
 /* Contenedor principal de servicios */
-.services {
-    padding: var(--spacing-4xl) 0;
+section.services {
+    padding-top: 200px;
     background: var(--gradient-light);
     background-image: url('../img/fondo_servicio_completo.jpeg');
     background-size: cover;
@@ -31,10 +31,14 @@
     z-index: 2;
 }
 
+.services .section-title {
+    color: var(--color-white);
+}
+
 /* Grid de servicios */
 #services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-xl);
     margin-top: var(--spacing-2xl);
 }
@@ -288,6 +292,7 @@
     #services-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
+        padding: 0;
     }
     
     .service-item {

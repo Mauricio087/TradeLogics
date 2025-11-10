@@ -122,7 +122,6 @@ body {
   line-height: 1.6;
   color: var(--color-gray-800);
   background-color: var(--color-white);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -188,9 +187,15 @@ a:hover {
 /* ===== UTILIDADES GENERALES ===== */
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 var(--spacing-md); /* Espaciado lateral reducido para móvil */
+}
+
+/* Aplicar max-width solo en pantallas más grandes */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section-title {
@@ -279,11 +284,29 @@ a:hover {
 /* ===== SECCIONES GENERALES ===== */
 section {
   padding: var(--spacing-4xl) 0;
-  scroll-margin-top: 180px; /* Ajustado para el navbar con logo más grande */
+}
+
+/* Ajuste del scroll-margin-top para el anclaje del header */
+@media (min-width: 768px) {
+  section {
+    scroll-margin-top: 180px; /* Escritorio */
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 104px; /* Móvil */
+  }
+}
+
+@media (max-width: 479px) {
+  section {
+    scroll-margin-top: 92px; /* Móvil pequeño */
+  }
 }
 
 section:not(.hero) {
-  padding-top: calc(var(--spacing-4xl) + 40px); /* Ajustado el espacio extra */
+  padding-top: var(--spacing-2xl);
 }
 
 .about {
@@ -291,10 +314,10 @@ section:not(.hero) {
 }
 
 .about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
 .about-text {
   font-size: var(--font-size-lg);
@@ -355,7 +378,7 @@ section:not(.hero) {
 
 /* ===== SECCIÓN PYMES ===== */
 .pymes {
-  background: var(--color-light);
+  background: rgb(13, 30, 57);
 }
 
 .pymes-content {
@@ -367,8 +390,12 @@ section:not(.hero) {
 .pymes-text {
   font-size: var(--font-size-lg);
   margin-bottom: var(--spacing-2xl);
-  color: var(--color-gray);
+  color: var(--color-white);
   line-height: 1.7;
+}
+
+.pymes .section-title {
+    color: var(--color-white);
 }
 
 /* ===== SECCIÓN POR QUÉ ELEGIRNOS ===== */
@@ -407,7 +434,7 @@ section:not(.hero) {
   gap: var(--spacing-xl);
 }
 
-.feature-item {
+.why-us-feature-item {
   text-align: center;
   padding: var(--spacing-xl);
   background: rgba(255, 255, 255, 0.8);
@@ -475,7 +502,7 @@ section:not(.hero) {
 
 /* ===== SECCIÓN TESTIMONIOS ===== */
 .testimonials {
-  background: var(--color-light);
+  background: rgb(13, 30, 57);
 }
 
 .testimonials-grid {
@@ -705,7 +732,7 @@ section:not(.hero) {
     scroll-margin-top: 104px; /* Alineado con header móvil */
   }
   section:not(.hero) {
-    padding-top: calc(var(--spacing-2xl) + 24px);
+    padding-top: var(--spacing-2xl);
   }
 
   /* Botones y CTAs */
@@ -795,7 +822,7 @@ section:not(.hero) {
   }
   
   .section-title {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-3xl);
   }
   
   .services-grid {

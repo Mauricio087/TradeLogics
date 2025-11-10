@@ -1,25 +1,12 @@
 /* Estilos para la sección Nuestra Empresa */
 .about {
-  padding: var(--spacing-6xl) 0;
+  padding: 0;
+  text-align: center;
   position: relative;
   background-image: url('../img/seccion.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.about::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
-  pointer-events: none;
-}
-  background: var(--color-primary);
-  position: relative;
 }
 
 .about::before {
@@ -138,14 +125,16 @@
 
 .about-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Mobile-first: una columna por defecto */
+  grid-template-columns: 1fr;
   gap: var(--spacing-xl);
   margin-top: var(--spacing-4xl);
   position: relative;
   z-index: 2;
+  padding: 0; /* Asegurar que no haya padding extra */
 }
 
-.feature-item {
+.about-feature-item {
   padding: var(--spacing-xl);
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
@@ -177,6 +166,7 @@
   font-size: var(--font-size-base);
   line-height: 1.6;
   color: var(--color-gray-600);
+  text-align: center;
   margin: 0;
   text-align: center;
 }
@@ -266,21 +256,41 @@
 }
 
 /* Responsive Design */
+
+/* Tablet y superior: aplicar diseño de varias columnas */
 @media (min-width: 768px) {
   .about-stats {
     grid-template-columns: repeat(3, 1fr);
   }
   
   .about-features {
-    grid-template-columns: 1fr;
+    /* Reintroducir la cuadrícula auto-ajustable para pantallas más grandes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
-@media (min-width: 1024px) {
+/* Ajustes específicos para móvil que ya estaban (se mantienen por si acaso) */
+@media (max-width: 767px) {
   .about-features {
     grid-template-columns: 1fr;
   }
-  
+
+  .about-feature-item {
+    padding: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .feature-item h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .feature-item p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Limpieza de reglas redundantes para desktop */
+@media (min-width: 1024px) {
   .feature-item {
     text-align: left;
   }
