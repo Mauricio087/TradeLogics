@@ -94,20 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceIcons = {
         transport: `<img src="assets/img/transporte_internacional.jpeg" alt="Transporte Internacional" class="service-image">`,
 
-        customs: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-        </svg>`,
+        customs: `<img src="assets/img/gestion_aduanera.jpeg" alt="Gestión Aduanera" class="service-image">`,
         consulting: `<img src="assets/img/pre-importacion.jpeg" alt="Asesoría Pre-importación" class="service-image">`,
 
-        finance: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M11.8,10.9C9.53,10.31 8.8,9.7 8.8,8.75C8.8,7.66 9.81,6.9 11.5,6.9C13.28,6.9 13.94,7.75 14,9H16.21C16.14,7.28 15.09,5.7 13,5.19V3H11V5.16C9.06,5.58 7.5,6.84 7.5,8.77C7.5,11.08 9.41,12.23 12.2,12.9C14.7,13.5 15.2,14.38 15.2,15.31C15.2,16 14.71,17.1 12.5,17.1C10.44,17.1 9.63,16.18 9.52,15H7.32C7.44,17.19 9.08,18.42 11,18.83V21H13V18.85C14.95,18.48 16.5,17.35 16.5,15.3C16.5,12.46 14.07,11.5 11.8,10.9Z"/>
-        </svg>`,
-        warehouse: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12,3L2,12H5V20H19V12H22L12,3M12,8.75A1.25,1.25 0 0,1 13.25,10A1.25,1.25 0 0,1 12,11.25A1.25,1.25 0 0,1 10.75,10A1.25,1.25 0 0,1 12,8.75M7,13H17V18H15V15H9V18H7V13Z"/>
-        </svg>`,
-        insurance: `<svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.1 16,12.7V16.2C16,16.8 15.4,17.3 14.8,17.3H9.2C8.6,17.3 8,16.8 8,16.2V12.7C8,12.1 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
-        </svg>`
+        finance: `<img src="assets/img/financiamiento_comercial.jpeg" alt="Financiamiento Comercial" class="service-image">`,
+        warehouse: `<img src="assets/img/almacenaje_y_distribucion.PNG" alt="Almacenaje y Distribución" class="service-image">`,
+        insurance: `<img src="assets/img/seguros_de_carga.PNG" alt="Seguros de Carga" class="service-image">`
     };
     
     // ===== FUNCIÓN PARA RENDERIZAR SERVICIOS =====
@@ -135,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== FUNCIÓN PARA CREAR ELEMENTO DE SERVICIO =====
     function createServiceElement(service, index) {
         const serviceDiv = document.createElement('div');
+        const serviceId = service.title.toLowerCase().replace('í', 'i').replace(/ /g, '-');
+        serviceDiv.id = serviceId;
         serviceDiv.className = 'service-item';
         serviceDiv.setAttribute('data-category', service.category);
         serviceDiv.style.animationDelay = `${index * 0.1}s`;

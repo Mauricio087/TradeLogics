@@ -220,7 +220,7 @@
   }
   
   .navbar {
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-md) 0;
   }
   
   /* Ajustar el logo en móvil para que no sea tan grande */

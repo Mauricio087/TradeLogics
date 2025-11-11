@@ -284,16 +284,16 @@
     min-height: 550px;
   }
   
-  .hero-title {
+  .hero h1 {
     font-size: var(--font-size-3xl);
   }
   
-  .hero-subtitle {
+  .hero p {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-xl);
   }
   
-  .hero-cta {
+  .hero .btn {
     font-size: var(--font-size-base);
     padding: var(--spacing-sm) var(--spacing-lg);
   }
@@ -303,24 +303,24 @@
 @media (max-width: 767px) {
   .hero {
     min-height: 500px;
-    padding-top: 120px; /* Compensar altura del header fijo ajustado */
+    padding-top: 100px; /* Compensar altura del header fijo ajustado */
   }
   
   .hero .container {
     padding: 0 var(--spacing-md);
   }
   
-  .hero-title {
+  .hero h1 {
     font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-md);
   }
   
-  .hero-subtitle {
-    font-size: var(--font-size-base);
+  .hero p {
+    font-size: var(--font-size-lg); /* Aumentado de base a lg */
     margin-bottom: var(--spacing-xl);
   }
   
-  .hero-cta {
+  .hero .btn {
     font-size: var(--font-size-base);
     padding: var(--spacing-sm) var(--spacing-lg);
   }
@@ -346,20 +346,20 @@
     padding-top: 104px; /* Compensación adicional en móvil pequeño */
   }
   
-  .hero-container {
+  .hero .container {
     padding: 0 var(--spacing-sm);
   }
   
-  .hero-title {
-    font-size: var(--font-size-xl);
+  .hero h1 {
+    font-size: 1.5rem;
     line-height: 1.3;
   }
   
-  .hero-subtitle {
-    font-size: var(--font-size-sm);
+  .hero p {
+    font-size: var(--font-size-base); /* Aumentado de sm a base */
   }
   
-  .hero-cta {
+  .hero .btn {
     font-size: var(--font-size-sm);
     padding: var(--spacing-xs) var(--spacing-md);
   }
@@ -367,15 +367,15 @@
 
 /* Desktop grande - 1280px y superior */
 @media (min-width: 1280px) {
-  .hero-title {
+  .hero h1 {
     font-size: var(--font-size-5xl);
   }
   
-  .hero-subtitle {
+  .hero p {
     font-size: var(--font-size-2xl);
   }
   
-  .hero-cta {
+  .hero .btn {
     font-size: var(--font-size-xl);
     padding: var(--spacing-lg) var(--spacing-2xl);
   }
@@ -383,7 +383,7 @@
 
 /* ===== ACCESIBILIDAD ===== */
 
-.hero-cta:focus {
+.hero .btn:focus {
   outline: 3px solid rgba(255, 255, 255, 0.8);
   outline-offset: 2px;
 }
@@ -395,17 +395,17 @@
 
 /* Reducir movimiento para usuarios que prefieren menos animaciones */
 @media (prefers-reduced-motion: reduce) {
-  .hero-container,
-  .hero-title,
-  .hero-subtitle,
-  .hero-cta,
+  .hero-content,
+  .hero h1,
+  .hero p,
+  .hero .btn,
   .scroll-indicator,
   .scroll-arrow,
   .particle {
     animation: none;
   }
   
-  .hero-cta:hover {
+  .hero .btn:hover {
     transform: none;
   }
 }

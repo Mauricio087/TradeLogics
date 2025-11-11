@@ -725,7 +725,7 @@ section:not(.hero) {
 @media (max-width: 767px) {
   /* Ajustes globales de espaciado */
   .container {
-    padding: 0 var(--spacing-lg);
+    padding: 0 var(--spacing-md); /* Corregido: padding reducido para móvil */
   }
   section {
     padding: var(--spacing-2xl) 0;

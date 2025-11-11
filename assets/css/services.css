@@ -289,6 +289,10 @@ section.services {
 
 /* Media queries responsivas */
 @media (max-width: 768px) {
+    section.services {
+        padding-top: 120px; /* Reducir padding para móvil */
+    }
+
     #services-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);

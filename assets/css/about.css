@@ -136,7 +136,7 @@
 
 .about-feature-item {
   padding: var(--spacing-xl);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.8); /* Aumentada la opacidad */
   border-radius: 16px;
   border: 1px solid var(--color-primary-100);
   backdrop-filter: blur(10px);
@@ -256,6 +256,12 @@
 }
 
 /* Responsive Design */
+
+@media (max-width: 767px) {
+  .about {
+    padding: var(--spacing-2xl) 0; /* Añadir padding para móvil */
+  }
+}
 
 /* Tablet y superior: aplicar diseño de varias columnas */
 @media (min-width: 768px) {
