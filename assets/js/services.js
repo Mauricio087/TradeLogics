@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
         consulting: `<img src="assets/img/pre-importacion.jpeg" alt="Asesoría Pre-importación" class="service-image">`,
 
         finance: `<img src="assets/img/financiamiento_comercial.jpeg" alt="Financiamiento Comercial" class="service-image">`,
-        warehouse: `<img src="assets/img/almacenaje_y_distribucion.PNG" alt="Almacenaje y Distribución" class="service-image">`,
-        insurance: `<img src="assets/img/seguros_de_carga.PNG" alt="Seguros de Carga" class="service-image">`
+        warehouse: `<img src="assets/img/almacenaje_y_distribucion.jpeg" alt="Almacenaje y Distribución" class="service-image">`,
+        insurance: `<img src="assets/img/seguros_de_carga.png" alt="Seguros de Carga" class="service-image">`
     };
     
     // ===== FUNCIÓN PARA RENDERIZAR SERVICIOS =====

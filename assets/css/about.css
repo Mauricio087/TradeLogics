@@ -96,7 +96,7 @@
 .stat-item {
   text-align: center;
   padding: var(--spacing-xl);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
   border: 1px solid var(--color-primary-100);
   backdrop-filter: blur(10px);
@@ -125,6 +125,7 @@
 
 .about-features {
   display: grid;
+  justify-content: center; /* Centrar los elementos de la cuadrícula */
   /* Mobile-first: una columna por defecto */
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
